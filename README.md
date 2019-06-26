@@ -10,6 +10,6 @@
 
 Repository for Learning **"Structure and Interpretation of Computer Programs Second Edition"**
 
-**《计算机程序的构造与解释》**的学习仓库
+**《计算机程序的构造与解释》** 的学习仓库
 
 ***
