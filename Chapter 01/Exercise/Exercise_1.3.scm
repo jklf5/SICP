@@ -1,3 +1,4 @@
+; Define a procedure that takes three numbers as arguments and returns the sum of the squares of the two larger numbers
 ; 给出三个数，计算其中两个较大数的和
 ; 定义一个求两个数中较小值的过程
 (define (min a b)
