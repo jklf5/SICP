@@ -25,4 +25,4 @@
         (if (good-enough? guess)
             guess
             (try (improve guess))))
-    (try 1.0)
+    (try 1.0))
