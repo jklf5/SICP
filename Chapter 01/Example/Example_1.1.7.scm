@@ -23,6 +23,6 @@
         (average guess (/ x guess)))
     (define (try guess)
         (if (good-enough? guess)
-            (/ guess 1.0)
+            guess
             (try (improve guess))))
-    (try 1))
+    (try 1.0)
