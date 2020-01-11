@@ -18,7 +18,7 @@
 (define (sqrt x)
     (define (good-enough? guess)
         (< (abs (- (square guess) x))
-            .0000001))
+            .001))
     (define (improve guess)
         (average guess (/ x guess)))
     (define (try guess)
