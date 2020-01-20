@@ -1,0 +1,6 @@
+(define (expmod base exp m)
+    (cond ((= exp 0) 1)
+        ((even? exp) (remainder (* (expmod base (/ exp 2) m)
+                                    (expmod base (/ exp 2) m)) m))
+        (else (remainder (* base (expmod base (- exp 1) m)) m))))
+; 用Louis的方法计算expmod，用了显式乘法，这样做的话，当遇到exp为偶数时，会多做一次expmod运算，这样运算就增加了一倍。所以以前的Θ(logn)的时间复杂度就变成了Θ(n)
