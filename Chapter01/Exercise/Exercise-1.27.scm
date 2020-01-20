@@ -1,0 +1,5 @@
+(load "../Example/Example-1.2.6-Testing for Primality.scm")
+(define (check-Carmichael n)
+    (if (fermat-test n)
+        (display "true")
+        (display "false")))
