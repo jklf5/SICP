@@ -27,11 +27,13 @@
             (else #f)))
 ; 执行n/2次检查如果都通过，就可以保证结果的准确性。
 (define (fast-prime? n)
-    (let ((times (ceiling (/ n 2))))
-        (check-prime n times)))
+    (if (= n 1)
+        #t
+        (let ((times (ceiling (/ n 2))))
+            (check-prime n times))))
 
 ; Miller-Rabin检查：
 ; Miller-Rabin检查是在费马检查的基础上改进的，它也可以避开Carmichael数。
 ; 其原理是如果n是素数，a<n，则a^(n-1) % n=1，也要检查是否会遇到“1取模n的非平凡平方根”
-; 如果n是非素数的奇数，那么，至少有一般的数a<n,按照这种方式计算a^(n-1)，将会遇到1取模n的非平凡平方根，所以，在检查的时候，需要检查n/2次
+; 如果n是非素数的奇数，那么，至少有一半的数a<n,按照这种方式计算a^(n-1)，将会遇到1取模n的非平凡平方根，所以，在检查的时候，需要检查n/2次
 ; Miller-Rabin检查也是一个概率算法
