@@ -28,7 +28,7 @@
 ; 执行n/2次检查如果都通过，就可以保证结果的准确性。
 (define (fast-prime? n)
     (let ((times (ceiling (/ n 2))))
-        (f n times)))
+        (check-prime n times)))
 
 ; Miller-Rabin检查：
 ; Miller-Rabin检查是在费马检查的基础上改进的，它也可以避开Carmichael数。
