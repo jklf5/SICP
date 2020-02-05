@@ -1,6 +1,7 @@
 (define (average x y)
     (/ (+ x y) 2))
 ; 找出函数的不动点
+; 不动点：若f(x)=x，则f函数的不动点为x，通过不断改变猜测值直到值的变化不大时，就可以找到这个不动点
 (define tolerance 0.00001)
 (define (fixed-point f first-guess)
     (define (close-enough? v1 v2)
