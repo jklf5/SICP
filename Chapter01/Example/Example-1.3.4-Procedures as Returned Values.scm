@@ -1,7 +1,7 @@
 ; 使用牛顿法的特殊情况求平方根
 ; 如果x->g(x)是一个可微函数，那么方程g(x)=0（g(x)=y^2-x）的一个解就是函数x->f(x)的一个不动点，其中公式（1）：f(x)=x-g(x)/Dg(x)，其中Dg(x)是g(x)的导数
 ; 所以，可以通过不动点的方法，去逼近上述房产的解
-(load "./Example-Finding fixed points of functions.scm")
+(load "../Example/Example-Finding fixed points of functions.scm")
 (define dx 0.00001)
 (define (square x)
     (* x x))
