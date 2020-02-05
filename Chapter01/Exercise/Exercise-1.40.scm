@@ -1,0 +1,8 @@
+(load "../Example/Example-1.3.4-Procedures as Returned Values.scm")
+(define (cube x) (* x x x))
+(define (cubic a b c)
+    (lambda (x) 
+        (+ (cube x) 
+            (* a (square x)) 
+            (* b x) 
+            c)))
